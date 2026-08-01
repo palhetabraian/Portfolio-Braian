@@ -1,5 +1,6 @@
+import { PrimaryStack } from '@/components/PrimaryStack/PrimaryStack';
 import { SocialLinks } from '@/components/SocialLinks/SocialLinks';
-import { socialLinks } from '@/data/portfolio';
+import { socialLinks, stackItems } from '@/data/portfolio';
 
 export function PreviewComponents() {
   return (
@@ -16,23 +17,41 @@ export function PreviewComponents() {
 
           <p className="mt-8 max-w-3xl text-sm leading-7 md:text-base">
             Esta página é temporária. Ela serve para visualizar, um abaixo do
-            outro, os componentes criados durante o desenvolvimento do portfólio.
+            outro, os componentes criados durante o desenvolvimento do
+            portfólio.
           </p>
         </header>
 
-        <section className="grid gap-6 border-t border-border pt-8" aria-labelledby="social-links-title">
+        <section
+          className="grid gap-6 border-t border-border pt-8"
+          aria-labelledby="social-links-title"
+        >
           <div>
             <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
               Componente
             </p>
 
-            <h2 className="text-2xl font-bold tracking-[-1px]" id="social-links-title">
+            <h2
+              className="text-2xl font-bold tracking-[-1px]"
+              id="social-links-title"
+            >
               Links sociais
             </h2>
           </div>
 
           <SocialLinks links={socialLinks} />
         </section>
+      </section>
+      <section className="border-t border-border pt-8">
+        <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
+          Componente
+        </p>
+
+        <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
+          Stack principal
+        </h2>
+
+        <PrimaryStack items={stackItems} />
       </section>
     </main>
   );
