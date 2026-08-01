@@ -36,7 +36,7 @@ export function PrimaryStack({ items }: PrimaryStackProps) {
         const Icon = stackIcons[item];
         return (
           <li
-            className="grid min-w-20 justify-item-center gap-3 text-center"
+            className="grid min-w-20 justify-items-center gap-3 text-center"
             key={item}
           >
             <span className="grid size-12 place-items-center rounded-lg border border-border-strong bg-surface text-xl text-text transition duration-200 ease-portfolio hover:-translate-y-0.5 hover:bg-hover">

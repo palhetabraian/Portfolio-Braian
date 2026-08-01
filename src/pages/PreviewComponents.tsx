@@ -1,5 +1,6 @@
 import { PrimaryStack } from '@/components/PrimaryStack/PrimaryStack';
 import { SocialLinks } from '@/components/SocialLinks/SocialLinks';
+import { TechTag } from '@/components/TechTag/TechTag';
 import { socialLinks, stackItems } from '@/data/portfolio';
 
 export function PreviewComponents() {
@@ -52,6 +53,22 @@ export function PreviewComponents() {
         </h2>
 
         <PrimaryStack items={stackItems} />
+      </section>
+
+      <section className="border-t border-border pt-8">
+        <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
+          Componente
+        </p>
+
+        <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
+          Tags de tecnologia
+        </h2>
+
+        <div className="flex flex-wrap gap-3">
+          {stackItems.map((item) => (
+            <TechTag key={item} label={item} />
+          ))}
+        </div>
       </section>
     </main>
   );
