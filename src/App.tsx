@@ -1,4 +1,10 @@
+import { PreviewComponents } from '@/pages/PreviewComponents';
+
 export default function App() {
+  if (window.location.pathname === '/components') {
+    return <PreviewComponents />;
+  }
+
   return (
     <main className="theme-dark min-h-screen bg-bg px-6 py-16 font-mono text-text transition-colors duration-200 ease-portfolio">
       <section className="mx-auto grid min-h-[70vh] max-w-5xl place-content-center">
