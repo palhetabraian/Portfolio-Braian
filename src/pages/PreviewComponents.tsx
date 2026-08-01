@@ -1,6 +1,7 @@
 import { PrimaryStack } from '@/components/PrimaryStack/PrimaryStack';
 import { SocialLinks } from '@/components/SocialLinks/SocialLinks';
 import { TechTag } from '@/components/TechTag/TechTag';
+import { ProjectCard } from '@/components/ProjectCard/ProjectCard';
 import { socialLinks, stackItems } from '@/data/portfolio';
 
 export function PreviewComponents() {
@@ -69,6 +70,24 @@ export function PreviewComponents() {
             <TechTag key={item} label={item} />
           ))}
         </div>
+      </section>
+
+      <section className="border-t border-border pt-8">
+        <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
+          Componente
+        </p>
+
+        <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
+          Card de projeto
+        </h2>
+
+        <ProjectCard
+          title="braian.dev"
+          description="Projeto pessoal de portfólio para apresentar perfil, stack principal, projetos em destaque e repositórios públicos do GitHub."
+          technologies={['React', 'TypeScript', 'Vite', 'Tailwind CSS']}
+          repositoryUrl="https://github.com/palhetabraian"
+          demoUrl="https://braian.dev"
+        />
       </section>
     </main>
   );
