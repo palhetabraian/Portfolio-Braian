@@ -1,6 +1,6 @@
 # Portfolio Braian
 
-Portfólio pessoal de Braian Nickolas.
+Portfólio pessoal.
 
 ## Stack
 
