@@ -5,8 +5,44 @@
 @tailwind utilities;
 
 :root {
+  --paper: #fcf7f7;
+  --gray-300: #cbcbcb;
+  --gray-500: #a0a0a0;
+  --ink: #181818;
+
+  --ink-a04: rgb(24 24 24 / 4%);
+  --ink-a08: rgb(24 24 24 / 8%);
+  --ink-a16: rgb(24 24 24 / 16%);
+  --ink-a64: rgb(24 24 24 / 64%);
+
+  --paper-a04: rgb(252 247 247 / 4%);
+  --paper-a08: rgb(252 247 247 / 8%);
+  --paper-a16: rgb(252 247 247 / 16%);
+
   font-family: 'JetBrains Mono', monospace;
   color-scheme: dark;
+}
+
+.theme-dark {
+  --bg: var(--ink);
+  --surface: var(--ink);
+  --hover: var(--paper-a04);
+  --active: var(--paper-a08);
+  --text: var(--paper);
+  --muted: var(--gray-300);
+  --border: var(--paper-a16);
+  --border-strong: var(--gray-300);
+}
+
+.theme-light {
+  --bg: var(--paper);
+  --surface: var(--paper);
+  --hover: var(--ink-a04);
+  --active: var(--ink-a08);
+  --text: var(--ink);
+  --muted: var(--ink-a64);
+  --border: var(--ink-a16);
+  --border-strong: var(--ink-a64);
 }
 
 * {
@@ -20,7 +56,8 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: #181818;
+  background: var(--bg);
+  color: var(--text);
 }
 
 button,
@@ -35,6 +72,11 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid currentColor;
+  outline: 2px solid var(--text);
   outline-offset: 4px;
+}
+
+::selection {
+  background: var(--text);
+  color: var(--bg);
 }
