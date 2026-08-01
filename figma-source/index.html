@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Braian Nickolas — Design System V1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="canvas">
+    <section class="cover theme-dark" id="top">
+      <p class="eyebrow">01 / Design System</p>
+      <div class="cover-mark" aria-hidden="true">BP</div>
+      <h1>Braian Nickolas</h1>
+      <p>Minimal · Light / Dark · Desktop / Mobile</p>
+      <span>V1 — Foundations first</span>
+    </section>
+
+    <section class="board theme-light">
+      <header class="section-heading">
+        <p class="eyebrow">02 / Foundations</p>
+        <h2>Visual foundations</h2>
+        <p>Paleta neutra, hierarquia monoespaçada e acentos condensados.</p>
+      </header>
+
+      <div class="foundation-grid">
+        <article class="foundation-card">
+          <h3>Color primitives</h3>
+          <div class="swatches">
+            <div><span style="--swatch:#FCF7F7"></span><b>Paper</b><code>#FCF7F7</code></div>
+            <div><span style="--swatch:#CBCBCB"></span><b>Gray 300</b><code>#CBCBCB</code></div>
+            <div><span style="--swatch:#A0A0A0"></span><b>Gray 500</b><code>#A0A0A0</code></div>
+            <div><span style="--swatch:#181818"></span><b>Ink</b><code>#181818</code></div>
+          </div>
+        </article>
+
+        <article class="foundation-card">
+          <h3>Typography</h3>
+          <div class="type-sample accent-type">Bebas Neue</div>
+          <p class="type-meta">Accent / Regular / 64</p>
+          <div class="type-sample main-type">JetBrains Mono</div>
+          <p class="type-meta">Main / Regular, Medium, Bold</p>
+          <div class="type-scale">
+            <div style="--sample-size:48px"><strong>Heading 1</strong><code>48 / Bold</code></div>
+            <div style="--sample-size:36px"><strong>Heading 2</strong><code>36 / Bold</code></div>
+            <div style="--sample-size:28px"><strong>Heading 3</strong><code>28 / Bold</code></div>
+            <div style="--sample-size:18px"><strong>Title</strong><code>18 / Bold</code></div>
+            <div style="--sample-size:14px"><strong>Body</strong><code>14 / Regular</code></div>
+            <div style="--sample-size:11px"><strong>Label</strong><code>11 / Bold</code></div>
+          </div>
+        </article>
+
+        <article class="foundation-card">
+          <h3>Spacing</h3>
+          <div class="spacing-list">
+            <span style="--size:4px">4</span><span style="--size:8px">8</span>
+            <span style="--size:12px">12</span><span style="--size:16px">16</span>
+            <span style="--size:24px">24</span><span style="--size:32px">32</span>
+            <span style="--size:48px">48</span><span style="--size:64px">64</span>
+          </div>
+        </article>
+
+        <article class="foundation-card">
+          <h3>Radius & border</h3>
+          <div class="radius-list">
+            <div style="--radius:0"><span></span><code>0</code></div>
+            <div style="--radius:8px"><span></span><code>8</code></div>
+            <div style="--radius:12px"><span></span><code>12</code></div>
+            <div style="--radius:16px"><span></span><code>16</code></div>
+            <div style="--radius:999px"><span></span><code>Full</code></div>
+          </div>
+          <div class="border-specs">
+            <span style="--spec-width:1px">Default / 1</span>
+            <span style="--spec-width:2px">Focus / 2</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="theme-preview">
+        <article class="theme-panel theme-light">
+          <span>LIGHT</span>
+          <strong>Background / Paper</strong>
+          <p>Text / Ink · Border / Ink 16%</p>
+        </article>
+        <article class="theme-panel theme-dark">
+          <span>DARK</span>
+          <strong>Background / Ink</strong>
+          <p>Text / Paper · Border / Paper 16%</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="board theme-dark components-board">
+      <header class="section-heading">
+        <p class="eyebrow">03 / Components</p>
+        <h2>Reusable components</h2>
+        <p>Auto Layout-ready, minimal states and responsive behavior.</p>
+      </header>
+
+      <div class="component-section">
+        <h3>Header / Desktop</h3>
+        <nav class="site-header" aria-label="Amostra de navegação">
+          <div class="nav-links">
+            <a class="active" href="#top">Início</a>
+            <a href="#projects">Projetos</a>
+          </div>
+          <div class="nav-tools">
+            <button class="language" type="button" aria-label="Idioma atual: português">
+              <b>PT</b><span>/</span><span class="language-option">EN</span>
+            </button>
+            <button class="icon-button" type="button" aria-label="Alternar tema">☼</button>
+          </div>
+        </nav>
+      </div>
+
+      <div class="two-columns">
+        <div class="component-section">
+          <h3>Actions & social links</h3>
+          <div class="action-stack">
+            <a class="primary-button" href="https://wa.me/5521980758914" target="_blank" rel="noreferrer">
+              <span class="icon">◌</span> Enviar mensagem no WhatsApp
+            </a>
+            <div class="social-row">
+              <a href="https://github.com/palhetabraian" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/braian-nickolas-4177a7295/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="mailto:braiannickolas12@gmail.com">E-mail</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="component-section">
+          <h3>Tech badges</h3>
+          <div class="badge-row">
+            <span>TypeScript</span><span>React</span><span>Next.js</span><span>CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-section">
+        <h3>Primary Action / Interaction States</h3>
+        <div class="state-grid">
+          <div class="state-sample">
+            <span>Default</span>
+            <button class="primary-button" type="button">Mensagem</button>
+          </div>
+          <div class="state-sample">
+            <span>Hover</span>
+            <button class="primary-button state-hover" type="button">Mensagem</button>
+          </div>
+          <div class="state-sample">
+            <span>Focus</span>
+            <button class="primary-button state-focus" type="button">Mensagem</button>
+          </div>
+          <div class="state-sample">
+            <span>Active</span>
+            <button class="primary-button state-active" type="button">Mensagem</button>
+          </div>
+          <div class="state-sample">
+            <span>Disabled</span>
+            <button class="primary-button state-disabled" type="button" disabled>Mensagem</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-section" id="projects">
+        <h3>Project Card / Default & Hover</h3>
+        <div class="card-row">
+          <article class="project-card">
+            <h4>freeqrcode-generator</h4>
+            <p>Gerador de QR Code simples, rápido e sem cadastro.</p>
+            <div class="card-footer">
+              <div class="mini-tech"><span>JS</span><span>HTML</span><span>CSS</span></div>
+              <div class="card-links"><a href="#">GitHub</a><a href="#">Demo</a></div>
+            </div>
+          </article>
+          <article class="project-card hover-state">
+            <small>HOVER</small>
+            <h4>portfolio-dev</h4>
+            <p>Portfólio minimalista com temas claro e escuro.</p>
+            <div class="card-footer">
+              <div class="mini-tech"><span>TS</span><span>React</span></div>
+              <div class="card-links"><a href="#">GitHub</a><a href="#">Demo</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="component-section projects-list">
+        <div class="list-heading">
+          <div><p class="eyebrow">/ Projetos</p><h3>Meus projetos</h3></div>
+          <label class="search"><span>⌕</span><input value="" placeholder="Buscar por nome, tecnologia ou tag…" readonly></label>
+        </div>
+        <article class="project-list-item">
+          <div><h4>apps</h4><p>Open-source apps powering modern development workflows.</p><div class="badge-row"><span>TypeScript</span><span>HTML</span></div></div>
+          <dl><div><dt>★</dt><dd>27</dd></div><div><dt>⑂</dt><dd>30</dd></div></dl>
+        </article>
+        <article class="project-list-item">
+          <div><h4>tindev</h4><p>Uma experiência focada em descoberta de projetos para devs.</p><div class="badge-row"><span>Vue</span><span>JavaScript</span><span>CSS</span></div></div>
+          <dl><div><dt>★</dt><dd>21</dd></div><div><dt>⑂</dt><dd>0</dd></div></dl>
+        </article>
+      </div>
+
+      <div class="component-section mobile-section">
+        <h3>Header / Mobile</h3>
+        <div class="mobile-frame">
+          <div class="mobile-header"><strong>BN</strong><button type="button">Menu</button></div>
+          <p>A navegação completa abre em um painel compacto.</p>
+        </div>
+      </div>
+
+      <footer class="site-footer">
+        <p>© 2026 Braian Nickolas. Todos os direitos reservados.</p>
+        <div class="social-row">
+          <a href="mailto:braiannickolas12@gmail.com">E-mail</a>
+          <a href="https://github.com/palhetabraian" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/braian-nickolas-4177a7295/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+        <a class="back-to-top" href="#top" aria-label="Voltar ao topo">↑</a>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

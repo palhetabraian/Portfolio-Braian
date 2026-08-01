@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio de Braian Nickolas, desenvolvedor Full Stack focado em criar produtos digitais claros, eficientes e bem construídos.">
+  <meta name="theme-color" content="#181818">
+  <meta property="og:title" content="Braian Nickolas — Desenvolvedor Full Stack">
+  <meta property="og:description" content="Portfólio de Braian Nickolas, desenvolvedor Full Stack.">
+  <meta property="og:type" content="website">
+  <title>Braian Nickolas — Desenvolvedor Full Stack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./wireframe.css">
+</head>
+<body class="theme-dark wireframe-body" id="top">
+  <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4"></circle>
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+    </symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24">
+      <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"></path>
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16"></path>
+    </symbol>
+    <symbol id="icon-message" viewBox="0 0 24 24">
+      <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path>
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+      <path d="m3 7 9 6 9-6"></path>
+    </symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24">
+      <path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path>
+    </symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24">
+      <path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="7"></circle>
+      <path d="m20 20-4-4"></path>
+    </symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+      <path d="m6 10 6-6 6 6M12 4v16"></path>
+    </symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24">
+      <path d="m12 3 2.7 5.47 6.03.88-4.36 4.25 1.03 6-5.4-2.84-5.4 2.84 1.03-6-4.36-4.25 6.03-.88Z"></path>
+    </symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24">
+      <path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"></path>
+    </symbol>
+  </svg>
+
+  <header class="landing-header">
+    <nav class="site-header landing-header-desktop" aria-label="Navegação principal">
+      <a class="desktop-brand" href="#inicio" aria-label="Ir para o início">braian.dev</a>
+      <div class="nav-links">
+        <a class="active" href="#inicio" aria-current="page">Início</a>
+        <a href="#projetos">Projetos</a>
+      </div>
+      <div class="nav-tools">
+        <div class="language language-status" role="group" aria-label="Idioma atual: português. Inglês indisponível no momento">
+          <b>PT</b><span>/</span><span class="language-option">EN</span>
+        </div>
+        <button class="icon-button theme-toggle" data-theme-toggle type="button" aria-label="Ativar tema claro" aria-pressed="false">
+          <svg class="ui-icon icon-sun"><use href="#icon-sun"></use></svg>
+          <svg class="ui-icon icon-moon"><use href="#icon-moon"></use></svg>
+        </button>
+      </div>
+    </nav>
+
+    <nav class="landing-header-mobile" aria-label="Navegação mobile">
+      <a class="mobile-brand" href="#inicio" aria-label="Ir para o início">braian.dev</a>
+      <div class="mobile-actions">
+        <details class="mobile-menu">
+          <summary><svg class="ui-icon"><use href="#icon-menu"></use></svg><span>Menu</span></summary>
+          <div class="mobile-menu-panel">
+            <a href="#inicio">Início</a>
+            <a href="#projetos">Projetos</a>
+            <div class="mobile-language" role="group" aria-label="Idioma atual: português">
+              <b>PT</b><span>/</span><span>EN</span>
+            </div>
+          </div>
+        </details>
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Ativar tema claro" aria-pressed="false">
+          <svg class="ui-icon icon-sun"><use href="#icon-sun"></use></svg>
+          <svg class="ui-icon icon-moon"><use href="#icon-moon"></use></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="landing-section hero-section" id="inicio">
+      <div class="landing-container hero-content">
+        <p class="section-kicker">01 / Apresentação</p>
+        <p class="role-line">$ Desenvolvedor Full Stack</p>
+        <h1>Braian Nickolas</h1>
+        <p class="hero-copy">
+          Sou desenvolvedor Full Stack e transformo ideias em produtos digitais claros,
+          eficientes e bem construídos. Uno visão de produto, atenção à experiência e
+          domínio técnico para criar soluções que resolvem problemas reais.
+        </p>
+
+        <div class="hero-actions">
+          <a class="primary-button" href="https://wa.me/5521980758914" target="_blank" rel="noopener noreferrer">
+            <svg class="ui-icon"><use href="#icon-message"></use></svg>
+            <span>Enviar mensagem no WhatsApp</span>
+          </a>
+          <div class="social-row" role="group" aria-label="Redes sociais">
+            <a href="https://github.com/palhetabraian" target="_blank" rel="noopener noreferrer"><svg class="ui-icon"><use href="#icon-external"></use></svg>GitHub</a>
+            <a href="https://www.linkedin.com/in/braian-nickolas-4177a7295/" target="_blank" rel="noopener noreferrer"><svg class="ui-icon"><use href="#icon-external"></use></svg>LinkedIn</a>
+            <a href="mailto:braiannickolas12@gmail.com"><svg class="ui-icon"><use href="#icon-mail"></use></svg>E-mail</a>
+            <a href="./assets/curriculo-braian-nickolas.pdf" download><svg class="ui-icon"><use href="#icon-download"></use></svg>Baixar currículo</a>
+          </div>
+
+          <section class="primary-stack" aria-labelledby="primary-stack-title">
+            <p class="stack-title" id="primary-stack-title">Stack principal</p>
+            <ul class="stack-list">
+              <li>
+                <span class="stack-icon stack-icon-react" aria-hidden="true">⚛</span>
+                <span>React</span>
+              </li>
+              <li>
+                <span class="stack-icon" aria-hidden="true">V</span>
+                <span>Vite</span>
+              </li>
+              <li>
+                <span class="stack-icon stack-icon-wide" aria-hidden="true">TS</span>
+                <span>TypeScript</span>
+              </li>
+              <li>
+                <span class="stack-icon stack-icon-wide" aria-hidden="true">JS</span>
+                <span>Node.js</span>
+              </li>
+              <li>
+                <span class="stack-icon stack-icon-wide" aria-hidden="true">PG</span>
+                <span>PostgreSQL</span>
+              </li>
+              <li>
+                <span class="stack-icon" aria-hidden="true">N</span>
+                <span>Next.js</span>
+              </li>
+              <li>
+                <span class="stack-icon stack-icon-prisma" aria-hidden="true">△</span>
+                <span>Prisma</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="landing-section" aria-labelledby="destaques-title">
+      <div class="landing-container">
+        <div class="landing-section-heading">
+          <div>
+            <p class="section-kicker">02 / Destaques</p>
+            <h2 id="destaques-title">Projetos em destaque</h2>
+          </div>
+          <p>
+            Projetos escolhidos manualmente, com thumbnail própria e links definidos por você.
+            Esta área não depende da API do GitHub.
+          </p>
+        </div>
+
+        <div class="featured-grid">
+          <article class="featured-placeholder">
+            <div class="placeholder-heading">
+              <span>Projeto em destaque 01</span>
+              <small>Manual</small>
+            </div>
+            <div class="project-media-placeholder">Thumbnail do projeto</div>
+            <div class="placeholder-footer">
+              <span>Tecnologias</span>
+              <span>Repositório · Demonstração</span>
+            </div>
+          </article>
+
+          <article class="featured-placeholder">
+            <div class="placeholder-heading">
+              <span>Projeto em destaque 02</span>
+              <small>Manual</small>
+            </div>
+            <div class="project-media-placeholder">Thumbnail do projeto</div>
+            <div class="placeholder-footer">
+              <span>Tecnologias</span>
+              <span>Repositório · Demonstração</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="landing-section projects-section" id="projetos" aria-labelledby="projects-title">
+      <div class="landing-container">
+        <div class="landing-section-heading projects-heading">
+          <div>
+            <p class="section-kicker">03 / GitHub</p>
+            <h2 id="projects-title">Repositórios públicos</h2>
+          </div>
+          <label class="search">
+            <svg class="ui-icon"><use href="#icon-search"></use></svg>
+            <input type="search" placeholder="Buscar por nome, linguagem ou tag..." aria-label="Buscar repositórios" aria-describedby="projects-search-status">
+          </label>
+        </div>
+
+        <p class="repo-source-note">Lista alimentada pela API pública do GitHub.</p>
+        <p class="sr-only" id="projects-search-status" aria-live="polite">Carregando repositórios.</p>
+        <div class="wireframe-project-list" data-project-list aria-busy="true">
+          <article class="wireframe-project-row project-loading">
+            <div>
+              <h3>Carregando repositórios...</h3>
+              <p>Buscando os projetos públicos de github.com/palhetabraian.</p>
+            </div>
+            <span>GitHub API</span>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="landing-footer">
+    <div class="footer-content">
+      <p>© 2026 Braian Nickolas. Todos os direitos reservados.</p>
+      <div class="social-row">
+        <a href="mailto:braiannickolas12@gmail.com"><svg class="ui-icon"><use href="#icon-mail"></use></svg>E-mail</a>
+        <a href="./assets/curriculo-braian-nickolas.pdf" download><svg class="ui-icon"><use href="#icon-download"></use></svg>Baixar currículo</a>
+        <a href="https://github.com/palhetabraian" target="_blank" rel="noopener noreferrer"><svg class="ui-icon"><use href="#icon-external"></use></svg>GitHub</a>
+        <a href="https://www.linkedin.com/in/braian-nickolas-4177a7295/" target="_blank" rel="noopener noreferrer"><svg class="ui-icon"><use href="#icon-external"></use></svg>LinkedIn</a>
+      </div>
+      <a class="back-to-top" href="#top" aria-label="Voltar ao topo"><svg class="ui-icon"><use href="#icon-arrow-up"></use></svg></a>
+    </div>
+  </footer>
+  <script src="./wireframe.js"></script>
+</body>
+</html>
