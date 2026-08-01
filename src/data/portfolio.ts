@@ -1,4 +1,6 @@
-export const profile = {
+import type { FeaturedProject, Profile, SocialLink } from '@/types/portfolio';
+
+export const profile: Profile = {
   brand: 'braian.dev',
   name: 'Braian Nickolas',
   role: 'Desenvolvedor Full Stack',
@@ -8,7 +10,7 @@ export const profile = {
   copyright: '© 2026 Braian Nickolas. Todos os direitos reservados.',
 };
 
-export const socialLinks = [
+export const socialLinks: SocialLink[] = [
   {
     label: 'GitHub',
     href: 'https://github.com/palhetabraian',
@@ -32,7 +34,7 @@ export const socialLinks = [
   },
 ];
 
-export const stackItems = [
+export const stackItems: string[] = [
   'React',
   'TypeScript',
   'Node.js',
@@ -44,7 +46,7 @@ export const stackItems = [
   'GitHub',
 ];
 
-export const featuredProjects = [
+export const featuredProjects: FeaturedProject[] = [
   {
     title: 'Projeto em destaque 01',
     description: 'Conteúdo pendente. Este projeto será definido manualmente.',
