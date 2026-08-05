@@ -10,6 +10,7 @@ export type GithubRepositoryResponse = {
   topics: string[];
   languages_url: string;
   updated_at: string;
+  default_branch: string;
 };
 
 export type GithubLanguagesResponse = Record<string, number>;
