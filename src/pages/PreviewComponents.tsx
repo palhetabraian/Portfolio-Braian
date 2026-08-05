@@ -7,6 +7,7 @@ import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle';
 import { Header } from '@/components/Header/Header';
 import { Hero } from '@/components/Hero/Hero';
 import { FeaturedProjects } from '@/components/FeaturedProjects/FeaturedProjects';
+import { GithubProjects } from '@/components/GithubProjects/GithubProjects';
 
 export function PreviewComponents() {
   return (
@@ -132,6 +133,20 @@ export function PreviewComponents() {
                   <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
                     Projetos em destaque
                   </h2>
+
+                  <section className="border-t border-border pt-8">
+                    <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
+                      Componente
+                    </p>
+
+                    <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
+                      Projetos do GitHub
+                    </h2>
+
+                    <div className="overflow-hidden rounded-2xl border border-border bg-bg">
+                      <GithubProjects />
+                    </div>
+                  </section>
 
                   <div className="overflow-hidden rounded-2xl border border-border bg-bg">
                     <FeaturedProjects />
