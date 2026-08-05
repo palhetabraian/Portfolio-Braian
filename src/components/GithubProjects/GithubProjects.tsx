@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 
-import { ProjectCard } from '@/components/ProjectCard/ProjectCard';
+import { GithubProjectRow } from '@/components/GithubProjectRow/GithubProjectRow';
 import { useGithubProjects } from '@/hooks/useGithubProjects';
 
 export function GithubProjects() {
@@ -94,13 +94,7 @@ export function GithubProjects() {
       {!isLoading && !error && filteredProjects.length > 0 ? (
         <div className="grid gap-5">
           {filteredProjects.map((project) => (
-            <ProjectCard
-              description={project.description}
-              key={project.id}
-              repositoryUrl={project.repositoryUrl}
-              technologies={project.technologies}
-              title={project.name}
-            />
+            <GithubProjectRow key={project.id} project={project} />
           ))}
         </div>
       ) : null}

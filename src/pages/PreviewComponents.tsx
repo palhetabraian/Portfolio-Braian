@@ -1,18 +1,31 @@
-import { PrimaryStack } from '@/components/PrimaryStack/PrimaryStack';
-import { SocialLinks } from '@/components/SocialLinks/SocialLinks';
-import { TechTag } from '@/components/TechTag/TechTag';
-import { ProjectCard } from '@/components/ProjectCard/ProjectCard';
-import { socialLinks, stackItems } from '@/data/portfolio';
-import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle';
+import { FeaturedProjects } from '@/components/FeaturedProjects/FeaturedProjects';
+import { GithubProjectRow } from '@/components/GithubProjectRow/GithubProjectRow';
+import { GithubProjects } from '@/components/GithubProjects/GithubProjects';
 import { Header } from '@/components/Header/Header';
 import { Hero } from '@/components/Hero/Hero';
-import { FeaturedProjects } from '@/components/FeaturedProjects/FeaturedProjects';
-import { GithubProjects } from '@/components/GithubProjects/GithubProjects';
+import { PrimaryStack } from '@/components/PrimaryStack/PrimaryStack';
+import { ProjectCard } from '@/components/ProjectCard/ProjectCard';
+import { SocialLinks } from '@/components/SocialLinks/SocialLinks';
+import { TechTag } from '@/components/TechTag/TechTag';
+import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle';
+import { socialLinks, stackItems } from '@/data/portfolio';
+
+const githubProjectPreview = {
+  id: 1,
+  name: 'braian.dev',
+  repositoryUrl: 'https://github.com/palhetabraian',
+  description:
+    'Portfólio pessoal para apresentar perfil, stack principal, projetos em destaque e repositórios públicos do GitHub.',
+  technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+  stars: 12,
+  forks: 3,
+  updatedAt: '2026-08-05T00:00:00Z',
+};
 
 export function PreviewComponents() {
   return (
-    <main className="theme-dark min-h-screen bg-bg px-6 py-16 font-mono text-text transition-colors duration-200 ease-portfolio">
-      <section className="mx-auto grid max-w-5xl gap-10">
+    <main className="min-h-screen bg-bg px-6 py-16 font-mono text-text transition-colors duration-200 ease-portfolio">
+      <div className="mx-auto grid w-full max-w-5xl gap-12">
         <header>
           <p className="mb-6 text-xs uppercase tracking-[0.08em] text-muted">
             Preview de componentes
@@ -29,82 +42,75 @@ export function PreviewComponents() {
           </p>
         </header>
 
-        <section
-          className="grid gap-6 border-t border-border pt-8"
-          aria-labelledby="social-links-title"
-        >
-          <div>
-            <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-              Componente
-            </p>
+        <section className="border-t border-border pt-8">
+          <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
+            Componente
+          </p>
 
-            <h2
-              className="text-2xl font-bold tracking-[-1px]"
-              id="social-links-title"
-            >
-              Links sociais
-            </h2>
-          </div>
+          <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
+            Links sociais
+          </h2>
 
           <SocialLinks links={socialLinks} />
         </section>
-      </section>
-      <section className="border-t border-border pt-8">
-        <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-          Componente
-        </p>
 
-        <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
-          Stack principal
-        </h2>
+        <section className="border-t border-border pt-8">
+          <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
+            Componente
+          </p>
 
-        <PrimaryStack items={stackItems} />
-      </section>
+          <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
+            Stack principal
+          </h2>
 
-      <section className="border-t border-border pt-8">
-        <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-          Componente
-        </p>
+          <PrimaryStack items={stackItems} />
+        </section>
 
-        <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
-          Tags de tecnologia
-        </h2>
+        <section className="border-t border-border pt-8">
+          <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
+            Componente
+          </p>
 
-        <div className="flex flex-wrap gap-3">
-          {stackItems.map((item) => (
-            <TechTag key={item} label={item} />
-          ))}
-        </div>
-      </section>
+          <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
+            Tags de tecnologia
+          </h2>
 
-      <section className="border-t border-border pt-8">
-        <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-          Componente
-        </p>
+          <div className="flex flex-wrap gap-3">
+            {stackItems.map((item) => (
+              <TechTag key={item} label={item} />
+            ))}
+          </div>
+        </section>
 
-        <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
-          Card de projeto
-        </h2>
+        <section className="border-t border-border pt-8">
+          <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
+            Componente
+          </p>
 
-        <ProjectCard
-          title="braian.dev"
-          description="Projeto pessoal de portfólio para apresentar perfil, stack principal, projetos em destaque e repositórios públicos do GitHub."
-          technologies={['React', 'TypeScript', 'Vite', 'Tailwind CSS']}
-          repositoryUrl="https://github.com/palhetabraian"
-          demoUrl="https://braian.dev"
-        />
-      </section>
+          <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
+            Card de projeto
+          </h2>
 
-      <section className="border-t border-border pt-8">
-        <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-          Componente
-        </p>
+          <ProjectCard
+            title="braian.dev"
+            description="Projeto pessoal de portfólio para apresentar perfil, stack principal, projetos em destaque e repositórios públicos do GitHub."
+            technologies={['React', 'TypeScript', 'Vite', 'Tailwind CSS']}
+            repositoryUrl="https://github.com/palhetabraian"
+            demoUrl="https://braian.dev"
+          />
+        </section>
 
-        <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
-          Alternância de tema
-        </h2>
+        <section className="border-t border-border pt-8">
+          <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
+            Componente
+          </p>
 
-        <ThemeToggle />
+          <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
+            Alternância de tema
+          </h2>
+
+          <ThemeToggle />
+        </section>
 
         <section className="border-t border-border pt-8">
           <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
@@ -115,48 +121,61 @@ export function PreviewComponents() {
 
           <div className="relative min-h-32 overflow-hidden rounded-2xl border border-border bg-bg">
             <Header />
-            <section className="border-t border-border pt-8">
-              <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-                Componente
-              </p>
-
-              <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">Hero</h2>
-
-              <div className="overflow-hidden rounded-2xl border border-border bg-bg">
-                <Hero />
-
-                <section className="border-t border-border pt-8">
-                  <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-                    Componente
-                  </p>
-
-                  <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
-                    Projetos em destaque
-                  </h2>
-
-                  <section className="border-t border-border pt-8">
-                    <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-                      Componente
-                    </p>
-
-                    <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
-                      Projetos do GitHub
-                    </h2>
-
-                    <div className="overflow-hidden rounded-2xl border border-border bg-bg">
-                      <GithubProjects />
-                    </div>
-                  </section>
-
-                  <div className="overflow-hidden rounded-2xl border border-border bg-bg">
-                    <FeaturedProjects />
-                  </div>
-                </section>
-              </div>
-            </section>
           </div>
         </section>
-      </section>
+
+        <section className="border-t border-border pt-8">
+          <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
+            Componente
+          </p>
+
+          <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">Hero</h2>
+
+          <div className="overflow-hidden rounded-2xl border border-border bg-bg">
+            <Hero />
+          </div>
+        </section>
+
+        <section className="border-t border-border pt-8">
+          <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
+            Componente
+          </p>
+
+          <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
+            Projetos em destaque
+          </h2>
+
+          <div className="overflow-hidden rounded-2xl border border-border bg-bg">
+            <FeaturedProjects />
+          </div>
+        </section>
+
+        <section className="border-t border-border pt-8">
+          <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
+            Componente
+          </p>
+
+          <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
+            Linha de projeto do GitHub
+          </h2>
+
+          <GithubProjectRow project={githubProjectPreview} />
+        </section>
+
+        <section className="border-t border-border pt-8">
+          <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
+            Componente
+          </p>
+
+          <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
+            Projetos do GitHub
+          </h2>
+
+          <div className="overflow-hidden rounded-2xl border border-border bg-bg">
+            <GithubProjects />
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
