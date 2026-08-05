@@ -1,6 +1,6 @@
 import { FiExternalLink } from 'react-icons/fi';
 
-import { TechTag } from '../TechTag/TechTag';
+import { TechTag } from '@/components/TechTag/TechTag';
 
 type ProjectCardProps = {
   title: string;
@@ -18,9 +18,9 @@ export function ProjectCard({
   demoUrl,
 }: ProjectCardProps) {
   return (
-    <article>
-      <div>
-        <h3>
+    <article className="group rounded-2xl border border-border bg-surface p-5 transition duration-200 ease-portfolio hover:-translate-y-1 hover:border-border-strong hover:bg-hover">
+      <div className="mb-4 flex items-start justify-between gap-4">
+        <h3 className="text-xl font-bold tracking-[-0.5px] text-text">
           <a
             className="inline-flex items-center gap-2 no-underline"
             href={repositoryUrl}
@@ -28,8 +28,9 @@ export function ProjectCard({
             target="_blank"
           >
             {title}
+
             <FiExternalLink
-              aria-hidden={true}
+              aria-hidden="true"
               className="opacity-0 transition duration-200 group-hover:opacity-100"
             />
           </a>
@@ -40,7 +41,7 @@ export function ProjectCard({
         {description}
       </p>
 
-      <div>
+      <div className="mb-5 flex flex-wrap gap-2">
         {technologies.map((technology) => (
           <TechTag key={technology} label={technology} />
         ))}
