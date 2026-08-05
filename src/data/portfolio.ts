@@ -44,19 +44,21 @@ export const stackItems: string[] = [
 
 export const featuredProjects: FeaturedProject[] = [
   {
-    title: 'Projeto em destaque 01',
+    title: 'HelpDesk',
     description: 'Conteúdo pendente. Este projeto será definido manualmente.',
     technologies: ['Tecnologias'],
     repositoryUrl: '',
     demoUrl: '',
-    thumbnailLabel: 'Thumbnail do projeto',
+    thumbnailUrl: '/assets/projects/HelpDesk.png',
+    thumbnailLabel: 'Thumbnail do projeto HelpDesk',
   },
   {
-    title: 'Projeto em destaque 02',
+    title: 'Sistema de Reembolso',
     description: 'Conteúdo pendente. Este projeto será definido manualmente.',
     technologies: ['Tecnologias'],
     repositoryUrl: '',
     demoUrl: '',
-    thumbnailLabel: 'Thumbnail do projeto',
+    thumbnailUrl: '/assets/projects/Sistema de Reembolso.png',
+    thumbnailLabel: 'Thumbnail do projeto Sistema de Reembolso',
   },
 ];

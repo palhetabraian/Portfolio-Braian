@@ -32,13 +32,13 @@ export const ptBR = {
     section: '02 / Destaques',
     title: 'Projetos em destaque',
     description:
-      'Uma seleção manual dos principais projetos, com foco em contexto, tecnologias e resultado.',
+      'Projetos que demonstram minhas habilidades, tecnologias utilizadas e soluções desenvolvidas na prática.',
   },
   github: {
     section: '03 / Repositórios',
     title: 'Repositórios do GitHub',
     description:
-      'Repositórios públicos carregados diretamente do GitHub, com descrição priorizada pelo README.md e tecnologias combinadas automaticamente.',
+      'Repositórios públicos com projetos, estudos e soluções desenvolvidas durante minha evolução como desenvolvedor.',
     searchLabel: 'Buscar projetos',
     searchPlaceholder: 'Buscar por nome, tecnologia ou descrição...',
     loading: 'Carregando projetos do GitHub...',

@@ -36,10 +36,6 @@ export function GithubProjects() {
       className="mx-auto w-full max-w-5xl px-5 py-16 sm:px-6 md:py-24"
       id="repositorios"
     >
-      <p className="mb-6 text-xs uppercase tracking-[0.08em] text-muted">
-        {t('github.section')}
-      </p>
-
       <div className="mb-10 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
           <h2 className="text-3xl font-bold tracking-[-1px] sm:text-4xl md:text-5xl">

@@ -32,13 +32,13 @@ export const enUS = {
     section: '02 / Highlights',
     title: 'Featured projects',
     description:
-      'A manual selection of the main projects, focused on context, technologies and results.',
+      'Projects that demonstrate my skills, the technologies I use and solutions built in practice.',
   },
   github: {
     section: '03 / Repositories',
     title: 'GitHub repositories',
     description:
-      'Public repositories loaded directly from GitHub, with descriptions prioritized from README.md and technologies combined automatically.',
+      'Public repositories with projects, studies and solutions developed throughout my growth as a developer.',
     searchLabel: 'Search projects',
     searchPlaceholder: 'Search by name, technology or description...',
     loading: 'Loading GitHub projects...',
