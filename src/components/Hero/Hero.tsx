@@ -7,7 +7,7 @@ import { profile, socialLinks, stackItems } from '@/data/portfolio';
 export function Hero() {
   return (
     <section
-      className="mx-auto flex min-h-screen w-full max-w-5xl flex-col justify-center px-6 pb-24 pt-36 md:pb-32 md:pt-40"
+      className="mx-auto flex min-h-screen w-full max-w-5xl flex-col justify-center px-5 pb-20 pt-32 sm:px-6 md:pb-32 md:pt-40"
       id="inicio"
     >
       <p className="mb-6 text-xs uppercase tracking-[0.08em] text-muted">
@@ -16,7 +16,7 @@ export function Hero() {
 
       <p className="mb-6 text-sm text-text">$ {profile.role}</p>
 
-      <h1 className="text-5xl font-bold tracking-[-2px] md:text-7xl">
+      <h1 className="text-4xl font-bold tracking-[-2px] sm:text-5xl md:text-7xl">
         {profile.name}
       </h1>
 
@@ -26,7 +26,7 @@ export function Hero() {
 
       <div className="mt-8 flex flex-col items-start gap-4">
         <a
-          className="inline-flex min-h-12 items-center gap-2 rounded-full bg-text px-6 text-[11px] font-bold text-bg no-underline transition duration-200 ease-portfolio hover:-translate-y-0.5 hover:opacity-90 active:translate-y-0"
+          className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-text px-6 text-center text-[11px] font-bold text-bg no-underline transition duration-200 ease-portfolio hover:-translate-y-0.5 hover:opacity-90 active:translate-y-0 sm:w-auto"
           href={profile.whatsappUrl}
           rel="noreferrer"
           target="_blank"

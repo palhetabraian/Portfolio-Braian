@@ -31,12 +31,12 @@ const stackIcons: Record<string, IconType> = {
 
 export function PrimaryStack({ items }: PrimaryStackProps) {
   return (
-    <ul className="flex flex-wrap gap-6">
+    <ul className="grid grid-cols-3 gap-x-4 gap-y-6 sm:flex sm:flex-wrap sm:gap-6">
       {items.map((item) => {
         const Icon = stackIcons[item];
         return (
           <li
-            className="grid min-w-20 justify-items-center gap-3 text-center"
+            className="grid min-w-0 justify-items-center gap-3 text-center sm:min-w-20"
             key={item}
           >
             <span className="grid size-12 place-items-center rounded-lg border border-border-strong bg-surface text-xl text-text transition duration-200 ease-portfolio hover:-translate-y-0.5 hover:bg-hover">

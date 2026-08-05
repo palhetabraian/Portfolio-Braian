@@ -29,7 +29,11 @@ function getLinkIcon(label: string) {
 
 export function SocialLinks({ links }: SocialLinksProps) {
   return (
-    <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Links sociais">
+    <div
+      className="flex w-full flex-wrap items-center gap-2 sm:w-auto"
+      role="group"
+      aria-label="Links sociais"
+    >
       {links.map((link) => (
         <a
           key={link.label}
@@ -37,7 +41,7 @@ export function SocialLinks({ links }: SocialLinksProps) {
           target={link.isExternal ? '_blank' : undefined}
           rel={link.isExternal ? 'noopener noreferrer' : undefined}
           download={link.download}
-          className="inline-flex min-h-11 items-center gap-2 rounded-full border border-border px-4 text-[11px] font-bold uppercase text-text no-underline transition duration-200 ease-portfolio hover:-translate-y-px hover:border-border-strong hover:bg-hover active:translate-y-0 active:bg-active"
+          className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-full border border-border px-4 text-[11px] font-bold uppercase text-text no-underline transition duration-200 ease-portfolio hover:-translate-y-px hover:border-border-strong hover:bg-hover active:translate-y-0 active:bg-active sm:flex-none"
         >
           {getLinkIcon(link.label)}
           {link.label}

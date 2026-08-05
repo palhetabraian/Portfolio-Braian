@@ -12,7 +12,7 @@ export function GithubProjectRow({ project }: GithubProjectRowProps) {
     <article className="group rounded-2xl border border-border bg-surface p-5 transition duration-200 ease-portfolio hover:border-border-strong hover:bg-hover">
       <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
         <div className="min-w-0 flex-1">
-          <h3 className="text-xl font-bold tracking-[-0.5px] text-text">
+          <h3 className="min-w-0 break-words text-lg font-bold tracking-[-0.5px] text-text sm:text-xl">
             <a
               className="inline-flex items-center gap-2 no-underline"
               href={project.repositoryUrl}
@@ -39,7 +39,7 @@ export function GithubProjectRow({ project }: GithubProjectRowProps) {
           </div>
 
           <a
-            className="mt-5 inline-flex min-h-10 items-center gap-2 rounded-full border border-border px-4 text-[11px] font-bold uppercase text-text no-underline transition duration-200 ease-portfolio hover:border-border-strong hover:bg-active"
+            className="mt-5 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-full border border-border px-4 text-[11px] font-bold uppercase text-text no-underline transition duration-200 ease-portfolio hover:border-border-strong hover:bg-active sm:w-auto"
             href={project.repositoryUrl}
             rel="noreferrer"
             target="_blank"
