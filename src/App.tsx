@@ -1,4 +1,5 @@
 import { PreviewComponents } from '@/pages/PreviewComponents';
+import { Header } from './components/Header/Header';
 
 export default function App() {
   if (window.location.pathname === '/components') {
@@ -6,32 +7,42 @@ export default function App() {
   }
 
   return (
-    <main className="theme-dark min-h-screen bg-bg px-6 py-16 font-mono text-text transition-colors duration-200 ease-portfolio">
-      <section className="mx-auto grid min-h-[70vh] max-w-5xl place-content-center">
+    <main className="min-h-screen bg-bg text-text">
+      <Header />
+
+      <section
+        className="mx-auto flex min-h-screen w-full max-w-5xl flex-col justify-center px-6 py-32"
+        id="inicio"
+      >
         <p className="mb-6 text-xs uppercase tracking-[0.08em] text-muted">
-          02 / Design tokens
+          01 / Apresentação
         </p>
+
+        <p className="mb-6 text-sm text-text">$ Desenvolvedor Full Stack</p>
 
         <h1 className="text-5xl font-bold tracking-[-2px] md:text-7xl">
           Braian Nickolas
         </h1>
 
-        <p className="mt-8 max-w-3xl text-sm leading-7 md:text-base">
-          Tokens visuais configurados. Agora o projeto já tem base para tema,
-          cores, fonte, foco e responsividade.
+        <p className="mt-8 max-w-3xl text-base font-bold leading-relaxed text-text md:text-lg">
+          Sou desenvolvedor Full Stack e transformo ideias em produtos digitais
+          claros, eficientes e bem construídos. Uno visão de produto, atenção à
+          experiência e domínio técnico para criar soluções que resolvem
+          problemas reais.
+        </p>
+      </section>
+
+      <section
+        className="mx-auto min-h-screen w-full max-w-5xl px-6 py-24"
+        id="projetos"
+      >
+        <p className="mb-6 text-xs uppercase tracking-[0.08em] text-muted">
+          02 / Projetos
         </p>
 
-        <div className="mt-10 flex flex-wrap gap-3">
-          <span className="rounded-full border border-border px-4 py-2 text-xs uppercase text-text">
-            bg
-          </span>
-          <span className="rounded-full border border-border px-4 py-2 text-xs uppercase text-muted">
-            muted
-          </span>
-          <span className="rounded-full border border-border-strong px-4 py-2 text-xs uppercase text-text">
-            border
-          </span>
-        </div>
+        <h2 className="text-4xl font-bold tracking-[-1px] md:text-5xl">
+          Projetos
+        </h2>
       </section>
     </main>
   );

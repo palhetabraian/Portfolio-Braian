@@ -4,6 +4,7 @@ import { TechTag } from '@/components/TechTag/TechTag';
 import { ProjectCard } from '@/components/ProjectCard/ProjectCard';
 import { socialLinks, stackItems } from '@/data/portfolio';
 import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle';
+import { Header } from '@/components/Header/Header';
 
 export function PreviewComponents() {
   return (
@@ -101,6 +102,18 @@ export function PreviewComponents() {
         </h2>
 
         <ThemeToggle />
+
+        <section className="border-t border-border pt-8">
+          <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
+            Componente
+          </p>
+
+          <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">Header</h2>
+
+          <div className="relative min-h-32 overflow-hidden rounded-2xl border border-border bg-bg">
+            <Header />
+          </div>
+        </section>
       </section>
     </main>
   );
