@@ -3,7 +3,7 @@ import { Header } from '@/components/Header/Header';
 import { Hero } from '@/components/Hero/Hero';
 import { PreviewComponents } from '@/pages/PreviewComponents';
 import { GithubProjects } from '@/components/GithubProjects/GithubProjects';
-
+import { Footer } from '@/components/Footer/Footer';
 
 export default function App() {
   if (window.location.pathname === '/components') {
@@ -19,6 +19,7 @@ export default function App() {
       <FeaturedProjects />
 
       <GithubProjects />
+      <Footer />
     </main>
   );
 }
