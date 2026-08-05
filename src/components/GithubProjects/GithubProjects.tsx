@@ -5,7 +5,7 @@ import { GithubProjectRow } from '@/components/GithubProjectRow/GithubProjectRow
 import { useGithubProjects } from '@/hooks/useGithubProjects';
 
 export function GithubProjects() {
-  const { projects, isLoading, error } = useGithubProjects();
+  const { projects, isLoading, error, isUsingFallback } = useGithubProjects();
   const [search, setSearch] = useState('');
 
   const filteredProjects = useMemo(() => {
@@ -72,6 +72,13 @@ export function GithubProjects() {
 
       {isLoading ? (
         <p className="text-sm text-muted">Carregando projetos do GitHub...</p>
+      ) : null}
+
+      {isUsingFallback ? (
+        <p className="mb-6 rounded-2xl border border-border bg-surface p-4 text-sm leading-relaxed text-muted">
+          Exibindo uma versão salva dos projetos, porque não foi possível
+          consultar o GitHub agora.
+        </p>
       ) : null}
 
       {error ? <p className="text-sm text-muted">{error}</p> : null}
