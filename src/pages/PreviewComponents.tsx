@@ -6,6 +6,7 @@ import { socialLinks, stackItems } from '@/data/portfolio';
 import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle';
 import { Header } from '@/components/Header/Header';
 import { Hero } from '@/components/Hero/Hero';
+import { FeaturedProjects } from '@/components/FeaturedProjects/FeaturedProjects';
 
 export function PreviewComponents() {
   return (
@@ -122,6 +123,20 @@ export function PreviewComponents() {
 
               <div className="overflow-hidden rounded-2xl border border-border bg-bg">
                 <Hero />
+
+                <section className="border-t border-border pt-8">
+                  <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
+                    Componente
+                  </p>
+
+                  <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
+                    Projetos em destaque
+                  </h2>
+
+                  <div className="overflow-hidden rounded-2xl border border-border bg-bg">
+                    <FeaturedProjects />
+                  </div>
+                </section>
               </div>
             </section>
           </div>
