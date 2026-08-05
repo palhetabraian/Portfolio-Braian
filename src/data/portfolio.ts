@@ -45,18 +45,28 @@ export const stackItems: string[] = [
 export const featuredProjects: FeaturedProject[] = [
   {
     title: 'HelpDesk',
-    description: 'Conteúdo pendente. Este projeto será definido manualmente.',
-    technologies: ['Tecnologias'],
-    repositoryUrl: '',
+    description:
+      'HelpDesk é um sistema de atendimento para gerenciar chamados entre clientes, técnicos e administradores, desenvolvido como monorepo com backend em Node.js, Express, PostgreSQL, Prisma, TypeScript, Docker, autenticação JWT e validações com Zod.',
+    technologies: [
+      'React',
+      'TypeScript',
+      'Node.js',
+      'Express',
+      'PostgreSQL',
+      'Prisma',
+      'Docker',
+    ],
+    repositoryUrl: 'https://github.com/palhetabraian/HelpDesk',
     demoUrl: '',
     thumbnailUrl: '/assets/projects/HelpDesk.png',
     thumbnailLabel: 'Thumbnail do projeto HelpDesk',
   },
   {
     title: 'Sistema de Reembolso',
-    description: 'Conteúdo pendente. Este projeto será definido manualmente.',
-    technologies: ['Tecnologias'],
-    repositoryUrl: '',
+    description:
+      'Aplicação web para adicionar e visualizar despesas para reembolso, permitindo cadastrar nome, categoria e valor da despesa, listar os registros e exibir o total acumulado.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    repositoryUrl: 'https://github.com/palhetabraian/APP-Reembolso',
     demoUrl: '',
     thumbnailUrl: '/assets/projects/Sistema de Reembolso.png',
     thumbnailLabel: 'Thumbnail do projeto Sistema de Reembolso',
