@@ -7,7 +7,7 @@ import { profile, socialLinks, stackItems } from '@/data/portfolio';
 export function Hero() {
   return (
     <section
-      className="mx-auto flex min-h-screen w-full max-w-5xl flex-col justify-center px-6 py-32"
+      className="mx-auto flex min-h-screen w-full max-w-5xl flex-col justify-center px-6 pb-24 pt-36 md:pb-32 md:pt-40"
       id="inicio"
     >
       <p className="mb-6 text-xs uppercase tracking-[0.08em] text-muted">

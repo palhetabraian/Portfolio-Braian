@@ -1,9 +1,9 @@
 import { FeaturedProjects } from '@/components/FeaturedProjects/FeaturedProjects';
+import { Footer } from '@/components/Footer/Footer';
+import { GithubProjects } from '@/components/GithubProjects/GithubProjects';
 import { Header } from '@/components/Header/Header';
 import { Hero } from '@/components/Hero/Hero';
 import { PreviewComponents } from '@/pages/PreviewComponents';
-import { GithubProjects } from '@/components/GithubProjects/GithubProjects';
-import { Footer } from '@/components/Footer/Footer';
 
 export default function App() {
   if (window.location.pathname === '/components') {
@@ -14,11 +14,14 @@ export default function App() {
     <main className="min-h-screen bg-bg text-text">
       <Header />
 
-      <Hero />
+      <div className="grid gap-8">
+        <Hero />
 
-      <FeaturedProjects />
+        <FeaturedProjects />
 
-      <GithubProjects />
+        <GithubProjects />
+      </div>
+
       <Footer />
     </main>
   );
