@@ -4,6 +4,7 @@ export const ptBR = {
     home: 'Início',
     projects: 'Projetos',
     repositories: 'Repositórios',
+    repositoriesShort: 'Repos',
     language: {
       pt: 'Alterar idioma para português',
       en: 'Alterar idioma para inglês',
@@ -41,6 +42,7 @@ export const ptBR = {
     loading: 'Carregando projetos do GitHub...',
     fallback:
       'Exibindo uma versão salva dos projetos, porque não foi possível consultar o GitHub agora.',
+    descriptionUnavailable: 'Descrição indisponível no momento.',
     empty: 'Nenhum projeto encontrado no momento.',
     emptySearch: 'Nenhum projeto encontrado para essa busca.',
     openRepository: 'Abrir repositório {{name}}',
@@ -58,5 +60,24 @@ export const ptBR = {
   footer: {
     copyright: '© 2026 Braian Nickolas. Todos os direitos reservados.',
     backToTop: 'Voltar ao topo',
+  },
+  preview: {
+    eyebrow: 'Preview de componentes',
+    title: 'Components',
+    description:
+      'Esta página é temporária. Ela serve para visualizar, um abaixo do outro, os componentes criados durante o desenvolvimento do portfólio.',
+    component: 'Componente',
+    socialLinks: 'Links sociais',
+    stack: 'Stack principal',
+    techTags: 'Tags de tecnologia',
+    projectCard: 'Card de projeto',
+    themeToggle: 'Alternância de tema',
+    header: 'Header',
+    hero: 'Hero',
+    featuredProjects: 'Projetos em destaque',
+    githubProjectRow: 'Linha de projeto do GitHub',
+    githubProjects: 'Projetos do GitHub',
+    projectDescription:
+      'Projeto pessoal de portfólio para apresentar perfil, stack principal, projetos em destaque e repositórios públicos do GitHub.',
   },
 };

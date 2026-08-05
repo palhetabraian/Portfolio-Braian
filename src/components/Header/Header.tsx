@@ -7,16 +7,19 @@ import { useActiveSection } from '@/hooks/useActiveSection';
 const navigationItems = [
   {
     labelKey: 'header.home',
+    shortLabelKey: 'header.home',
     href: '#inicio',
     sectionId: 'inicio',
   },
   {
     labelKey: 'header.projects',
+    shortLabelKey: 'header.projects',
     href: '#projetos',
     sectionId: 'projetos',
   },
   {
     labelKey: 'header.repositories',
+    shortLabelKey: 'header.repositoriesShort',
     href: '#repositorios',
     sectionId: 'repositorios',
   },
@@ -34,10 +37,10 @@ export function Header() {
   }
 
   return (
-    <header className="fixed left-1/2 top-4 z-50 w-[calc(100%-1rem)] max-w-2xl -translate-x-1/2 sm:top-6 sm:w-[calc(100%-2rem)]">
+    <header className="fixed left-1/2 top-4 z-50 w-[calc(100%-0.5rem)] max-w-3xl -translate-x-1/2 sm:top-6 sm:w-[calc(100%-2rem)]">
       <nav
         aria-label={t('header.navigationLabel')}
-        className="flex min-h-14 items-center justify-center gap-3 rounded-full border border-border bg-surface/90 px-3 text-[10px] font-bold uppercase text-text shadow-sm backdrop-blur sm:gap-4 sm:px-4 sm:text-[11px] md:justify-between md:px-5"
+        className="flex min-h-14 items-center justify-center gap-2 rounded-full border border-border bg-surface/90 px-2 text-[9px] font-bold uppercase text-text shadow-sm backdrop-blur sm:gap-4 sm:px-4 sm:text-[11px] md:justify-between md:px-5"
       >
         <a
           className="hidden normal-case tracking-normal no-underline md:inline-flex"
@@ -51,14 +54,14 @@ export function Header() {
           aria-hidden="true"
         />
 
-        <div className="flex min-w-0 items-center gap-3 sm:gap-5">
+        <div className="flex min-w-0 items-center gap-2 sm:gap-5">
           {navigationItems.map((item) => {
             const isActive = activeSection === item.sectionId;
 
             return (
               <a
                 aria-current={isActive ? 'page' : undefined}
-                className="inline-flex shrink-0 items-center gap-1.5 no-underline transition hover:text-muted sm:gap-2"
+                className="inline-flex shrink-0 items-center gap-1 no-underline transition hover:text-muted sm:gap-2"
                 href={item.href}
                 key={item.sectionId}
               >
@@ -69,7 +72,8 @@ export function Header() {
                   }`}
                 />
 
-                {t(item.labelKey)}
+                <span className="sm:hidden">{t(item.shortLabelKey)}</span>
+                <span className="hidden sm:inline">{t(item.labelKey)}</span>
               </a>
             );
           })}
@@ -80,7 +84,7 @@ export function Header() {
           aria-hidden="true"
         />
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
           <button
             aria-label={t('header.language.pt')}
             aria-pressed={currentLanguage === 'pt-BR'}

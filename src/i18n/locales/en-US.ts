@@ -4,6 +4,7 @@ export const enUS = {
     home: 'Home',
     projects: 'Projects',
     repositories: 'Repositories',
+    repositoriesShort: 'Repos',
     language: {
       pt: 'Change language to Portuguese',
       en: 'Change language to English',
@@ -41,6 +42,7 @@ export const enUS = {
     loading: 'Loading GitHub projects...',
     fallback:
       'Showing a saved version of the projects because GitHub could not be reached right now.',
+    descriptionUnavailable: 'Description unavailable at the moment.',
     empty: 'No projects found at the moment.',
     emptySearch: 'No projects found for this search.',
     openRepository: 'Open repository {{name}}',
@@ -58,5 +60,24 @@ export const enUS = {
   footer: {
     copyright: '© 2026 Braian Nickolas. All rights reserved.',
     backToTop: 'Back to top',
+  },
+  preview: {
+    eyebrow: 'Component preview',
+    title: 'Components',
+    description:
+      'This is a temporary page. It is used to preview, one below the other, the components created during the portfolio development.',
+    component: 'Component',
+    socialLinks: 'Social links',
+    stack: 'Main stack',
+    techTags: 'Technology tags',
+    projectCard: 'Project card',
+    themeToggle: 'Theme toggle',
+    header: 'Header',
+    hero: 'Hero',
+    featuredProjects: 'Featured projects',
+    githubProjectRow: 'GitHub project row',
+    githubProjects: 'GitHub projects',
+    projectDescription:
+      'Personal portfolio project to present profile, main stack, featured projects and public GitHub repositories.',
   },
 };

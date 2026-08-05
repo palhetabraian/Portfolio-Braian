@@ -80,10 +80,7 @@ export async function getGithubProjects(): Promise<GithubProject[]> {
         id: repository.id,
         name: repository.name,
         repositoryUrl: repository.html_url,
-        description:
-          readmeSummary ??
-          repository.description ??
-          'Descrição indisponível no momento.',
+        description: readmeSummary ?? repository.description ?? '',
         technologies: normalizeTechnologies(
           languages,
           repository.topics,

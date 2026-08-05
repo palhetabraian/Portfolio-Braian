@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import { FeaturedProjects } from '@/components/FeaturedProjects/FeaturedProjects';
 import { GithubProjectRow } from '@/components/GithubProjectRow/GithubProjectRow';
 import { GithubProjects } from '@/components/GithubProjects/GithubProjects';
@@ -14,8 +16,7 @@ const githubProjectPreview = {
   id: 1,
   name: 'braian.dev',
   repositoryUrl: 'https://github.com/palhetabraian',
-  description:
-    'Portfólio pessoal para apresentar perfil, stack principal, projetos em destaque e repositórios públicos do GitHub.',
+  description: '',
   technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
   stars: 12,
   forks: 3,
@@ -23,32 +24,33 @@ const githubProjectPreview = {
 };
 
 export function PreviewComponents() {
+  const { t } = useTranslation();
+  const previewProjectDescription = t('preview.projectDescription');
+
   return (
     <main className="min-h-screen bg-bg px-6 py-16 font-mono text-text transition-colors duration-200 ease-portfolio">
       <div className="mx-auto grid w-full max-w-5xl gap-12">
         <header>
           <p className="mb-6 text-xs uppercase tracking-[0.08em] text-muted">
-            Preview de componentes
+            {t('preview.eyebrow')}
           </p>
 
           <h1 className="text-5xl font-bold tracking-[-2px] md:text-7xl">
-            Components
+            {t('preview.title')}
           </h1>
 
           <p className="mt-8 max-w-3xl text-sm leading-7 md:text-base">
-            Esta página é temporária. Ela serve para visualizar, um abaixo do
-            outro, os componentes criados durante o desenvolvimento do
-            portfólio.
+            {t('preview.description')}
           </p>
         </header>
 
         <section className="border-t border-border pt-8">
           <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-            Componente
+            {t('preview.component')}
           </p>
 
           <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
-            Links sociais
+            {t('preview.socialLinks')}
           </h2>
 
           <SocialLinks links={socialLinks} />
@@ -56,11 +58,11 @@ export function PreviewComponents() {
 
         <section className="border-t border-border pt-8">
           <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-            Componente
+            {t('preview.component')}
           </p>
 
           <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
-            Stack principal
+            {t('preview.stack')}
           </h2>
 
           <PrimaryStack items={stackItems} />
@@ -68,11 +70,11 @@ export function PreviewComponents() {
 
         <section className="border-t border-border pt-8">
           <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-            Componente
+            {t('preview.component')}
           </p>
 
           <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
-            Tags de tecnologia
+            {t('preview.techTags')}
           </h2>
 
           <div className="flex flex-wrap gap-3">
@@ -84,16 +86,16 @@ export function PreviewComponents() {
 
         <section className="border-t border-border pt-8">
           <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-            Componente
+            {t('preview.component')}
           </p>
 
           <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
-            Card de projeto
+            {t('preview.projectCard')}
           </h2>
 
           <ProjectCard
             title="braian.dev"
-            description="Projeto pessoal de portfólio para apresentar perfil, stack principal, projetos em destaque e repositórios públicos do GitHub."
+            description={previewProjectDescription}
             technologies={['React', 'TypeScript', 'Vite', 'Tailwind CSS']}
             repositoryUrl="https://github.com/palhetabraian"
             demoUrl="https://braian.dev"
@@ -102,11 +104,11 @@ export function PreviewComponents() {
 
         <section className="border-t border-border pt-8">
           <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-            Componente
+            {t('preview.component')}
           </p>
 
           <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
-            Alternância de tema
+            {t('preview.themeToggle')}
           </h2>
 
           <ThemeToggle />
@@ -114,10 +116,12 @@ export function PreviewComponents() {
 
         <section className="border-t border-border pt-8">
           <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-            Componente
+            {t('preview.component')}
           </p>
 
-          <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">Header</h2>
+          <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
+            {t('preview.header')}
+          </h2>
 
           <div className="relative min-h-32 overflow-hidden rounded-2xl border border-border bg-bg">
             <Header />
@@ -126,10 +130,12 @@ export function PreviewComponents() {
 
         <section className="border-t border-border pt-8">
           <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-            Componente
+            {t('preview.component')}
           </p>
 
-          <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">Hero</h2>
+          <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
+            {t('preview.hero')}
+          </h2>
 
           <div className="overflow-hidden rounded-2xl border border-border bg-bg">
             <Hero />
@@ -138,11 +144,11 @@ export function PreviewComponents() {
 
         <section className="border-t border-border pt-8">
           <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-            Componente
+            {t('preview.component')}
           </p>
 
           <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
-            Projetos em destaque
+            {t('preview.featuredProjects')}
           </h2>
 
           <div className="overflow-hidden rounded-2xl border border-border bg-bg">
@@ -152,23 +158,28 @@ export function PreviewComponents() {
 
         <section className="border-t border-border pt-8">
           <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-            Componente
+            {t('preview.component')}
           </p>
 
           <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
-            Linha de projeto do GitHub
+            {t('preview.githubProjectRow')}
           </h2>
 
-          <GithubProjectRow project={githubProjectPreview} />
+          <GithubProjectRow
+            project={{
+              ...githubProjectPreview,
+              description: previewProjectDescription,
+            }}
+          />
         </section>
 
         <section className="border-t border-border pt-8">
           <p className="mb-3 text-xs uppercase tracking-[0.08em] text-muted">
-            Componente
+            {t('preview.component')}
           </p>
 
           <h2 className="mb-6 text-2xl font-bold tracking-[-1px]">
-            Projetos do GitHub
+            {t('preview.githubProjects')}
           </h2>
 
           <div className="overflow-hidden rounded-2xl border border-border bg-bg">

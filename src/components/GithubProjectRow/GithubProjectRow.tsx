@@ -33,7 +33,7 @@ export function GithubProjectRow({ project }: GithubProjectRowProps) {
           </h3>
 
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-text">
-            {project.description}
+            {project.description || t('github.descriptionUnavailable')}
           </p>
 
           <div className="mt-5 flex flex-wrap gap-2">
