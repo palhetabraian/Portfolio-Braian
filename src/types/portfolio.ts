@@ -17,5 +17,6 @@ export type FeaturedProject = {
   technologies: string[];
   repositoryUrl: string;
   demoUrl: string;
+  thumbnailUrl?: string;
   thumbnailLabel: string;
 };

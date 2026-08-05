@@ -35,6 +35,8 @@ export function FeaturedProjects() {
             key={project.title}
             repositoryUrl={project.repositoryUrl}
             technologies={project.technologies}
+            thumbnailLabel={project.thumbnailLabel}
+            thumbnailUrl={project.thumbnailUrl}
             title={project.title}
           />
         ))}

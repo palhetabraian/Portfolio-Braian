@@ -56,3 +56,23 @@ npm run preview
 - react-icons
 - i18next
 - react-i18next
+
+## 📁 Assets
+
+O currículo deve ficar em:
+
+```text
+public/assets/curriculo-braian-nickolas.pdf
+```
+
+As thumbnails dos projetos em destaque devem ficar em:
+
+```text
+public/assets/projects/
+```
+
+Exemplo de uso no código:
+
+```ts
+thumbnailUrl: '/assets/projects/nome-do-projeto.png'
+```

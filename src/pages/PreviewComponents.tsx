@@ -99,6 +99,7 @@ export function PreviewComponents() {
             technologies={['React', 'TypeScript', 'Vite', 'Tailwind CSS']}
             repositoryUrl="https://github.com/palhetabraian"
             demoUrl="https://braian.dev"
+            thumbnailLabel="Preview do projeto braian.dev"
           />
         </section>
 
