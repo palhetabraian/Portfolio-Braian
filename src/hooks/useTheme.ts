@@ -1,4 +1,4 @@
-// hook responsavel pelo tema escuro e claro
+// Hook responsável pelo tema claro e escuro.
 
 import { useEffect, useState } from 'react';
 
@@ -14,7 +14,7 @@ function getInitialTheme(): Theme {
   }
 
   const prefersDarkMode = window.matchMedia(
-    'prefers-color-scheme:dark'
+    '(prefers-color-scheme: dark)',
   ).matches;
 
   return prefersDarkMode ? 'dark' : 'light';
@@ -23,8 +23,8 @@ function getInitialTheme(): Theme {
 function applyTheme(theme: Theme) {
   const root = document.documentElement;
 
-  root.dataset.theme = theme;
-  root.classList.toggle('dark', theme === 'dark');
+  root.classList.remove('theme-light', 'theme-dark');
+  root.classList.add(`theme-${theme}`);
 
   localStorage.setItem(storageKey, theme);
 }
