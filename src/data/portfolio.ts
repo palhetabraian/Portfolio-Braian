@@ -5,7 +5,7 @@ export const profile: Profile = {
   name: 'Braian Nickolas',
   role: 'Desenvolvedor Full Stack',
   intro:
-    'Sou desenvolvedor Full Stack e transformo ideias em produtos digitais claros, eficientes e bem construídos. Uno visão de produto, atenção à experiência e domínio técnico para criar soluções que resolvem problemas reais.',
+    'Sou desenvolvedor de software e transformo ideias em produtos digitais claros, eficientes e bem construídos. Uno visão de produto, atenção à experiência e domínio técnico para criar soluções que resolvem problemas reais.',
   whatsappUrl: 'https://wa.me/5521980758914',
   copyright: '© 2026 Braian Nickolas. Todos os direitos reservados.',
 };
