@@ -54,3 +54,5 @@ npm run preview
 - Vite
 - Tailwind CSS
 - react-icons
+- i18next
+- react-i18next

@@ -1,0 +1,62 @@
+export const ptBR = {
+  header: {
+    navigationLabel: 'Navegação principal',
+    home: 'Início',
+    projects: 'Projetos',
+    repositories: 'Repositórios',
+    language: {
+      pt: 'Alterar idioma para português',
+      en: 'Alterar idioma para inglês',
+    },
+  },
+  hero: {
+    section: '01 / Apresentação',
+    role: 'Desenvolvedor Full Stack',
+    intro:
+      'Sou desenvolvedor de software e transformo ideias em produtos digitais claros, eficientes e bem construídos. Uno visão de produto, atenção à experiência e domínio técnico para criar soluções que resolvem problemas reais.',
+    whatsapp: 'Enviar mensagem no WhatsApp',
+    stack: 'Stack principal',
+  },
+  social: {
+    groupLabel: 'Links sociais',
+    github: 'GitHub',
+    linkedin: 'LinkedIn',
+    email: 'E-mail',
+    resume: 'Baixar currículo',
+    resumeAria: 'Baixar currículo em PDF',
+  },
+  featured: {
+    section: '02 / Destaques',
+    title: 'Projetos em destaque',
+    description:
+      'Uma seleção manual dos principais projetos, com foco em contexto, tecnologias e resultado.',
+  },
+  github: {
+    section: '03 / Repositórios',
+    title: 'Repositórios do GitHub',
+    description:
+      'Repositórios públicos carregados diretamente do GitHub, com descrição priorizada pelo README.md e tecnologias combinadas automaticamente.',
+    searchLabel: 'Buscar projetos',
+    searchPlaceholder: 'Buscar por nome, tecnologia ou descrição...',
+    loading: 'Carregando projetos do GitHub...',
+    fallback:
+      'Exibindo uma versão salva dos projetos, porque não foi possível consultar o GitHub agora.',
+    empty: 'Nenhum projeto encontrado no momento.',
+    emptySearch: 'Nenhum projeto encontrado para essa busca.',
+    openRepository: 'Abrir repositório {{name}}',
+  },
+  project: {
+    openRepository: 'Abrir repositório do projeto {{title}}',
+    openDemo: 'Abrir demonstração do projeto {{title}}',
+    repository: 'Repositório',
+    demo: 'Demonstração',
+  },
+  theme: {
+    light: 'Ativar modo claro',
+    dark: 'Ativar modo escuro',
+  },
+  footer: {
+    copyright: '© 2026 Braian Nickolas. Todos os direitos reservados.',
+    backToTop: 'Voltar ao topo',
+  },
+};

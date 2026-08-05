@@ -1,14 +1,11 @@
 export type Profile = {
   brand: string;
   name: string;
-  role: string;
-  intro: string;
   whatsappUrl: string;
-  copyright: string;
 };
 
 export type SocialLink = {
-  label: string;
+  id: 'github' | 'linkedin' | 'email' | 'resume';
   href: string;
   isExternal: boolean;
   download?: boolean;

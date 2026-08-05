@@ -3,31 +3,27 @@ import type { FeaturedProject, Profile, SocialLink } from '@/types/portfolio';
 export const profile: Profile = {
   brand: 'braian.dev',
   name: 'Braian Nickolas',
-  role: 'Desenvolvedor Full Stack',
-  intro:
-    'Sou desenvolvedor de software e transformo ideias em produtos digitais claros, eficientes e bem construídos. Uno visão de produto, atenção à experiência e domínio técnico para criar soluções que resolvem problemas reais.',
   whatsappUrl: 'https://wa.me/5521980758914',
-  copyright: '© 2026 Braian Nickolas. Todos os direitos reservados.',
 };
 
 export const socialLinks: SocialLink[] = [
   {
-    label: 'GitHub',
+    id: 'github',
     href: 'https://github.com/palhetabraian',
     isExternal: true,
   },
   {
-    label: 'LinkedIn',
+    id: 'linkedin',
     href: 'https://www.linkedin.com/in/braian-nickolas-4177a7295/',
     isExternal: true,
   },
   {
-    label: 'E-mail',
+    id: 'email',
     href: 'mailto:braiannickolas12@gmail.com',
     isExternal: false,
   },
   {
-    label: 'Baixar currículo',
+    id: 'resume',
     href: '/assets/curriculo-braian-nickolas.pdf',
     isExternal: false,
     download: true,

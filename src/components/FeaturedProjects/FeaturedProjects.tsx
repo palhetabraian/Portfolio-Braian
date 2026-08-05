@@ -1,25 +1,28 @@
+import { useTranslation } from 'react-i18next';
+
 import { ProjectCard } from '@/components/ProjectCard/ProjectCard';
 import { featuredProjects } from '@/data/portfolio';
 
 export function FeaturedProjects() {
+  const { t } = useTranslation();
+
   return (
     <section
       className="mx-auto w-full max-w-5xl px-5 py-16 sm:px-6 md:py-24"
       id="projetos"
     >
       <p className="mb-6 text-xs uppercase tracking-[0.08em] text-muted">
-        02 / Destaques
+        {t('featured.section')}
       </p>
 
       <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <h2 className="text-3xl font-bold tracking-[-1px] sm:text-4xl md:text-5xl">
-            Projetos em destaque
+            {t('featured.title')}
           </h2>
 
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
-            Uma seleção manual dos principais projetos, com foco em contexto,
-            tecnologias e resultado.
+            {t('featured.description')}
           </p>
         </div>
       </div>

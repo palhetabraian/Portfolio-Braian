@@ -1,10 +1,12 @@
 import type { MouseEvent } from 'react';
 import { FiMoon, FiSun } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 
 import { useTheme } from '@/hooks/useTheme';
 
 export function ThemeToggle() {
   const { isDarkMode, toggleTheme } = useTheme();
+  const { t } = useTranslation();
 
   function handleThemeToggle(event: MouseEvent<HTMLButtonElement>) {
     const button = event.currentTarget;
@@ -18,7 +20,7 @@ export function ThemeToggle() {
 
   return (
     <button
-      aria-label={isDarkMode ? 'Ativar modo claro' : 'Ativar modo escuro'}
+      aria-label={isDarkMode ? t('theme.light') : t('theme.dark')}
       aria-pressed={isDarkMode}
       className="grid size-11 place-items-center rounded-full bg-transparent text-text transition-all duration-300 ease-portfolio hover:scale-105 hover:bg-hover focus-visible:bg-hover active:scale-95 active:bg-active"
       onClick={handleThemeToggle}

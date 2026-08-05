@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 
 import { GithubProjectRow } from '@/components/GithubProjectRow/GithubProjectRow';
 import { useGithubProjects } from '@/hooks/useGithubProjects';
@@ -7,6 +8,7 @@ import { useGithubProjects } from '@/hooks/useGithubProjects';
 export function GithubProjects() {
   const { projects, isLoading, error, isUsingFallback } = useGithubProjects();
   const [search, setSearch] = useState('');
+  const { t } = useTranslation();
 
   const filteredProjects = useMemo(() => {
     const normalizedSearch = search.trim().toLowerCase();
@@ -35,24 +37,22 @@ export function GithubProjects() {
       id="repositorios"
     >
       <p className="mb-6 text-xs uppercase tracking-[0.08em] text-muted">
-        03 / Repositórios
+        {t('github.section')}
       </p>
 
       <div className="mb-10 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
           <h2 className="text-3xl font-bold tracking-[-1px] sm:text-4xl md:text-5xl">
-            Repositórios do GitHub
+            {t('github.title')}
           </h2>
 
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
-            Repositórios públicos carregados diretamente do GitHub, com
-            descrição priorizada pelo README.md e tecnologias combinadas
-            automaticamente.
+            {t('github.description')}
           </p>
         </div>
 
         <label className="relative block w-full md:max-w-sm">
-          <span className="sr-only">Buscar projetos</span>
+          <span className="sr-only">{t('github.searchLabel')}</span>
 
           <FiSearch
             aria-hidden="true"
@@ -64,7 +64,7 @@ export function GithubProjects() {
             onChange={(event) => {
               setSearch(event.target.value);
             }}
-            placeholder="Buscar por nome, tecnologia ou descrição..."
+            placeholder={t('github.searchPlaceholder')}
             type="search"
             value={search}
           />
@@ -73,7 +73,7 @@ export function GithubProjects() {
 
       <div aria-live="polite" role="status">
         {isLoading ? (
-          <p className="text-sm text-muted">Carregando projetos do GitHub...</p>
+          <p className="text-sm text-muted">{t('github.loading')}</p>
         ) : null}
       </div>
 
@@ -82,8 +82,7 @@ export function GithubProjects() {
           aria-live="polite"
           className="mb-6 rounded-2xl border border-border bg-surface p-4 text-sm leading-relaxed text-muted"
         >
-          Exibindo uma versão salva dos projetos, porque não foi possível
-          consultar o GitHub agora.
+          {t('github.fallback')}
         </p>
       ) : null}
 
@@ -91,7 +90,7 @@ export function GithubProjects() {
 
       {!isLoading && !error && projects.length === 0 ? (
         <p className="text-sm text-muted">
-          Nenhum projeto encontrado no momento.
+          {t('github.empty')}
         </p>
       ) : null}
 
@@ -100,7 +99,7 @@ export function GithubProjects() {
       projects.length > 0 &&
       filteredProjects.length === 0 ? (
         <p className="text-sm text-muted">
-          Nenhum projeto encontrado para essa busca.
+          {t('github.emptySearch')}
         </p>
       ) : null}
 
