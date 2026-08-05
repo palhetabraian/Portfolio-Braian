@@ -5,6 +5,8 @@ export const ptBR = {
     projects: 'Projetos',
     repositories: 'Repositórios',
     repositoriesShort: 'Repos',
+    openMenu: 'Abrir menu de navegação',
+    closeMenu: 'Fechar menu de navegação',
     language: {
       pt: 'Alterar idioma para português',
       en: 'Alterar idioma para inglês',

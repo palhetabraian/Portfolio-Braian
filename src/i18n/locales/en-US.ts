@@ -5,6 +5,8 @@ export const enUS = {
     projects: 'Projects',
     repositories: 'Repositories',
     repositoriesShort: 'Repos',
+    openMenu: 'Open navigation menu',
+    closeMenu: 'Close navigation menu',
     language: {
       pt: 'Change language to Portuguese',
       en: 'Change language to English',
