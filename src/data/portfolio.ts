@@ -24,7 +24,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     id: 'resume',
-    href: '/assets/curriculo-braian-nickolas.pdf',
+    href: '/assets/Braian-Nickolas-curriculum.pdf',
     isExternal: false,
     download: true,
   },
