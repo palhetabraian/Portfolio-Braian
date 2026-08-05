@@ -13,7 +13,6 @@ export const enUS = {
     },
   },
   hero: {
-    section: '01 / Introduction',
     role: 'Full Stack Developer',
     intro:
       'I am a software developer who turns ideas into clear, efficient and well-built digital products. I combine product thinking, attention to user experience and technical depth to create solutions that solve real problems.',

@@ -13,10 +13,6 @@ export function Hero() {
       className="mx-auto flex min-h-screen w-full max-w-5xl flex-col justify-center px-5 pb-20 pt-32 sm:px-6 md:pb-32 md:pt-40"
       id="inicio"
     >
-      <p className="mb-6 text-xs uppercase tracking-[0.08em] text-muted">
-        {t('hero.section')}
-      </p>
-
       <p className="mb-6 text-sm text-text">$ {t('hero.role')}</p>
 
       <h1 className="text-4xl font-bold tracking-[-2px] sm:text-5xl md:text-7xl">

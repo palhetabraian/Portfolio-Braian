@@ -13,7 +13,6 @@ export const ptBR = {
     },
   },
   hero: {
-    section: '01 / Apresentação',
     role: 'Desenvolvedor Full Stack',
     intro:
       'Sou desenvolvedor de software e transformo ideias em produtos digitais claros, eficientes e bem construídos. Uno visão de produto, atenção à experiência e domínio técnico para criar soluções que resolvem problemas reais.',
