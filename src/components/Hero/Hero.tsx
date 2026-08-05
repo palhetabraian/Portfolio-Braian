@@ -1,7 +1,8 @@
 import { FiMessageCircle } from 'react-icons/fi';
 
+import { PrimaryStack } from '@/components/PrimaryStack/PrimaryStack';
 import { SocialLinks } from '@/components/SocialLinks/SocialLinks';
-import { profile, socialLinks } from '@/data/portfolio';
+import { profile, socialLinks, stackItems } from '@/data/portfolio';
 
 export function Hero() {
   return (
@@ -35,6 +36,14 @@ export function Hero() {
         </a>
 
         <SocialLinks links={socialLinks} />
+      </div>
+
+      <div className="mt-10 border-t border-border pt-8">
+        <p className="mb-6 text-xs uppercase tracking-[0.08em] text-muted">
+          Stack principal
+        </p>
+
+        <PrimaryStack items={stackItems} />
       </div>
     </section>
   );
