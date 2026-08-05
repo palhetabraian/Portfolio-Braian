@@ -37,6 +37,7 @@ export function SocialLinks({ links }: SocialLinksProps) {
       {links.map((link) => (
         <a
           key={link.label}
+          aria-label={link.download ? 'Baixar currículo em PDF' : link.label}
           href={link.href}
           target={link.isExternal ? '_blank' : undefined}
           rel={link.isExternal ? 'noopener noreferrer' : undefined}

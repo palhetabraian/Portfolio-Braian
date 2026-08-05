@@ -49,6 +49,7 @@ export function Header() {
 
             return (
               <a
+                aria-current={isActive ? 'page' : undefined}
                 className="inline-flex shrink-0 items-center gap-1.5 no-underline transition hover:text-muted sm:gap-2"
                 href={item.href}
                 key={item.sectionId}

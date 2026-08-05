@@ -30,6 +30,7 @@ export function GithubProjects() {
 
   return (
     <section
+      aria-busy={isLoading}
       className="mx-auto w-full max-w-5xl px-5 py-16 sm:px-6 md:py-24"
       id="repositorios"
     >
@@ -70,12 +71,17 @@ export function GithubProjects() {
         </label>
       </div>
 
-      {isLoading ? (
-        <p className="text-sm text-muted">Carregando projetos do GitHub...</p>
-      ) : null}
+      <div aria-live="polite" role="status">
+        {isLoading ? (
+          <p className="text-sm text-muted">Carregando projetos do GitHub...</p>
+        ) : null}
+      </div>
 
       {isUsingFallback ? (
-        <p className="mb-6 rounded-2xl border border-border bg-surface p-4 text-sm leading-relaxed text-muted">
+        <p
+          aria-live="polite"
+          className="mb-6 rounded-2xl border border-border bg-surface p-4 text-sm leading-relaxed text-muted"
+        >
           Exibindo uma versão salva dos projetos, porque não foi possível
           consultar o GitHub agora.
         </p>

@@ -14,6 +14,7 @@ export function GithubProjectRow({ project }: GithubProjectRowProps) {
         <div className="min-w-0 flex-1">
           <h3 className="min-w-0 break-words text-lg font-bold tracking-[-0.5px] text-text sm:text-xl">
             <a
+              aria-label={`Abrir repositório ${project.name}`}
               className="inline-flex items-center gap-2 no-underline"
               href={project.repositoryUrl}
               rel="noreferrer"
@@ -23,7 +24,7 @@ export function GithubProjectRow({ project }: GithubProjectRowProps) {
 
               <FiExternalLink
                 aria-hidden="true"
-                className="opacity-0 transition duration-200 group-hover:opacity-100"
+                className="opacity-0 transition duration-200 group-hover:opacity-100 group-focus-within:opacity-100"
               />
             </a>
           </h3>
@@ -39,6 +40,7 @@ export function GithubProjectRow({ project }: GithubProjectRowProps) {
           </div>
 
           <a
+            aria-label={`Abrir repositório ${project.name}`}
             className="mt-5 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-full border border-border px-4 text-[11px] font-bold uppercase text-text no-underline transition duration-200 ease-portfolio hover:border-border-strong hover:bg-active sm:w-auto"
             href={project.repositoryUrl}
             rel="noreferrer"
