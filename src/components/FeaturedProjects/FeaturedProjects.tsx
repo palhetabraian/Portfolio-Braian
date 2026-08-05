@@ -5,7 +5,7 @@ export function FeaturedProjects() {
   return (
     <section
       className="mx-auto w-full max-w-5xl px-6 py-20 md:py-24"
-      id="destaques"
+      id="projetos"
     >
       <p className="mb-6 text-xs uppercase tracking-[0.08em] text-muted">
         02 / Destaques

@@ -31,16 +31,16 @@ export function GithubProjects() {
   return (
     <section
       className="mx-auto w-full max-w-5xl px-6 py-20 md:py-24"
-      id="projetos"
+      id="repositorios"
     >
       <p className="mb-6 text-xs uppercase tracking-[0.08em] text-muted">
-        03 / Projetos
+        03 / Repositórios
       </p>
 
       <div className="mb-10 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
           <h2 className="text-4xl font-bold tracking-[-1px] md:text-5xl">
-            Projetos do GitHub
+            Repositórios do GitHub
           </h2>
 
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
